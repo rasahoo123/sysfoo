@@ -43,3 +43,6 @@ jobs:
       # Store Artifacts!
       - store_artifacts:
           path: ~/repo/target/
+          
+    post:
+      - mv target/*.war $CIRCLE_ARTIFACTS/
