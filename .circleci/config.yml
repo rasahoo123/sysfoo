@@ -42,4 +42,4 @@ jobs:
       
       # Store Artifacts!
       - store_artifacts:
-          path: /tmp
+          path: ~/repo/target/
