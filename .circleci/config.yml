@@ -39,10 +39,9 @@ jobs:
         
       # run tests!
       - run: mvn package
-      
+        
+      - run: cp /home/circleci/repo/target/*.war /tmp 
+          
       # Store Artifacts!
       - store_artifacts:
-          path: ~/repo/target/
-          
-    post:
-      - mv target/*.war $CIRCLE_ARTIFACTS/
+          path: /tmp
